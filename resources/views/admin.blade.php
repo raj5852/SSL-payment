@@ -1,4 +1,7 @@
 @extends('admin.app')
+@section('css')
+    <link href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css" rel="stylesheet">
+@endsection
 @section('content')
     <!--start content-->
     <main class="page-content">
@@ -7,18 +10,20 @@
             <div class="breadcrumb-title pe-3"></div>
             <div class="ps-3">
                 <nav aria-label="breadcrumb">
-                    <ol class="breadcrumb mb-0 p-0">
 
-                    </ol>
                 </nav>
             </div>
 
         </div>
         <!--end breadcrumb-->
         <h1 class="text-center">Report</h1>
+        @if (session()->has('success'))
+        <div class="alert alert-success">{{ session()->get('success') }} </div>
+
+        @endif
         <div class="card card-body">
             <div class="table-responsive">
-                <table class="table table-bordered">
+                <table class="table table-bordered yajra-datatable">
                     <thead>
                         <tr>
                             <th>SL</th>
@@ -35,22 +40,6 @@
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($datas as $data)
-                        <tr>
-                            <td> {{++$i}} </td>
-                            <td> {{ $data->name }} </td>
-                            <td> {{ $data->email }} </td>
-                            <td> {{ $data->phone }} </td>
-                            <td> {{ $data->address }} </td>
-                            <td> {{ $data->status }} </td>
-                            <td> {{ $data->transaction_id }} </td>
-                            <td> {{ $data->packagename }} </td>
-                            <td> {{ $data->packvalue }} </td>
-                            <td> {{ $data->amount }} </td>
-                            <td> <button class="btn btn-success btn-sm">Edit</button> </td>
-                        </tr>
-
-                        @endforeach
                     </tbody>
 
                 </table>
@@ -61,4 +50,80 @@
 
     </main>
     <!--end page main-->
+@endsection
+@section('js')
+    <script src="https://cdn.datatables.net/1.10.21/js/jquery.dataTables.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('.yajra-datatable').DataTable({
+                processing: true,
+                serverSide: true,
+                ajax: "{{ route('ajax') }}",
+                columns: [{
+                        data: 'id',
+                        name: 'id'
+                    },
+
+                    {
+                        data: 'name',
+                        name: 'name'
+                    },
+                    {
+                        data: 'email',
+                        name: 'email'
+                    },
+                    {
+                        data: 'phone',
+                        name: 'phone'
+                    },
+                    {
+                        data: 'address',
+                        name: 'address'
+                    },
+                    {
+                        data: 'status',
+                        name: 'status'
+                    },
+                    {
+                        data: 'transaction_id',
+                        name: 'transaction_id'
+                    },
+                    {
+                        data: 'packagename',
+                        name: 'packagename'
+                    },
+                    {
+                        data: 'packvalue',
+                        name: 'packvalue'
+                    },
+                    {
+                        data: 'amount',
+                        name: 'amount'
+                    },
+                    {
+                        data: 'action',
+                        name: 'action',
+                        orderable: false
+                    },
+
+
+                    // {
+                    //     data: 'created_at',
+                    //     name: 'created_at'
+                    // },
+                    // {
+                    //     data: 'action',
+                    //     name: 'action',
+                    //     orderable: false
+                    // },
+                ],
+                order: [
+                    [0, 'desc']
+                ]
+            });
+
+        });
+    </script>
 @endsection

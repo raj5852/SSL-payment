@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\LoginController;
+use App\Http\Controllers\EditdeleteControler;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SslCommerzPaymentController;
 
@@ -26,10 +27,6 @@ Route::view('database','database')->name('database');
 
 
 
-// Route::get('/example1', [SslCommerzPaymentController::class, 'exampleEasyCheckout']);
-// Route::get('/example2', [SslCommerzPaymentController::class, 'exampleHostedCheckout']);
-
-// Route::post('/pay', [SslCommerzPaymentController::class, 'index']);
 Route::post('/pay-via-ajax', [SslCommerzPaymentController::class, 'payViaAjax']);
 
 Route::post('/success', [SslCommerzPaymentController::class, 'success']);
@@ -42,7 +39,12 @@ Route::post('/ipn', [SslCommerzPaymentController::class, 'ipn']);
 
 
 Route::group(['prefix'=>'admin'],function(){
-    Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard');
-    Route::get('login',[LoginController::class,'index'])->name('login');
+    Route::get('dashboard',[DashboardController::class,'index'])->name('dashboard')->middleware('auth');
+    Route::get('login',[LoginController::class,'index'])->name('login')->middleware('guest');
     Route::post('login',[LoginController::class,'post'])->name('loginpost');
+    Route::get('logout',[LoginController::class,'logout'])->name('logout');
+    Route::get('ajax',[DashboardController::class,'ajax'])->name('ajax');
+    Route::get('edit/{id}',[EditdeleteControler::class,'edit']);
+    Route::post('update',[EditdeleteControler::class,'update'])->name('update');
+    Route::get('delete/{id}',[EditdeleteControler::class,'delete'])->name('delete');
 });

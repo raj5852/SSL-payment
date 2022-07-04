@@ -6,6 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="assets/images/favicon-32x32.png" type="image/png" />
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!--plugins-->
     {{-- <link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" /> --}}
     {{-- <link href="{{ asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" /> --}}
@@ -27,7 +29,7 @@
     <link href="{{ asset('assets/css/light-theme.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/semi-dark.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/header-colors.css') }}" rel="stylesheet" /> --}}
-
+    @yield('css')
     <title> Admin Page </title>
 </head>
 
@@ -48,3 +50,4 @@
 {{-- <script src="{{ asset('assets/js/pace.min.js') }}"></script> --}}
 <!--app-->
 <script src="{{ asset('assets/js/app.js') }}"></script>
+@yield('js')
