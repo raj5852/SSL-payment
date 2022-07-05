@@ -190,11 +190,11 @@
 
 
 
-                        <button   class="btn btn-primary btn-lg btn-block" id="sslczPayBtn"
+                        <button  type="button" class="btn btn-primary btn-lg btn-block" id="sslczPayBtn"
                             token="if you have any token validation"
                             postdata="your javascript arrays or objects which requires in backend"
                             order="If you already have the transaction generated for current order"
-                            endpoint="{{ url('/pay-via-ajax') }}"> Pay Now
+                            endpoint="{{ url('/pay-via-ajax') }}"> <span></span> Pay Now
                         </button>
 
                     </form>
@@ -233,7 +233,9 @@
     </script>
     <script>
         $(document).ready(function() {
-
+            $('#sslczPayBtn').click(function(){
+                $('#myModal').modal('hide');
+            })
         })
     </script>
     <script>
@@ -260,6 +262,7 @@
             obj.packagename = packname
             obj.packagvalue = packval
             obj.pay = packval
+
 
         })
 

@@ -44,7 +44,7 @@
                             <p>2018 Update</p>
                             <p>70% Active</p>
                             <p>Stock -20 Lacs</p>
-                            <div class="agileits-buy"><a packprice="2500"  packname="BD Mix Email Data 2,500/- Per Lac"  data-toggle="modal" data-target="#myModal" href="#small-dialog2">Buy
+                            <div class="agileits-buy"><a packprice="2500"  packname="BD Mix Email Data 2,500/- Per Lac"  data-toggle="modal" data-target="#myModal" class="modalPopup" href="#small-dialog2">Buy
                                     Now</a><br><br>
                                 <a href="http://maqpaperltd.com/web/dweb/" target="_blank">DEMO</a>
                             </div>
@@ -63,7 +63,7 @@
                             <p>2018 Update</p>
                             <p>70% Active</p>
                             <p>Stock -1 Billion</p>
-                            <div class="agileits-buy"><a packprice="2500"  packname="Worldwide Email ID 2,500/- Per Lac"  data-toggle="modal" data-target="#myModal"  href="#small-dialog3">Buy
+                            <div class="agileits-buy"><a packprice="2500"  packname="Worldwide Email ID 2,500/- Per Lac"  data-toggle="modal" data-target="#myModal" class="modalPopup"   href="#small-dialog3">Buy
                                     Now</a><br><br>
                                 <a href="http://maqpaperltd.com/web/ecom/" target="_blank">DEMO</a>
                             </div>
@@ -83,7 +83,7 @@
                             <p>90% Active</p>
                             <p>Stock -10 Lacs</p>
                             <p>2018 HSC Student 7 Lacs</p>
-                            <div class="agileits-buy"><a packprice="4000"  packname="BD Mobile Data 4,000/- Per Lac"  data-toggle="modal" data-target="#myModal" href="#small-dialog4">Buy
+                            <div class="agileits-buy"><a packprice="4000"  packname="BD Mobile Data 4,000/- Per Lac"  data-toggle="modal" data-target="#myModal" class="modalPopup"  href="#small-dialog4">Buy
                                     Now</a><br><br>
                                 <a href="http://maqpaperltd.com/web/newstv/" target="_blank">DEMO</a>
                             </div>
@@ -102,7 +102,7 @@
                             <p>2018 Update</p>
                             <p>70% Active</p>
                             <p>Stock -1 Million</p>
-                            <div class="agileits-buy"><a packprice="2500"  packname="Facebook Email ID 2,500/- Per Lac"  data-toggle="modal" data-target="#myModal" href="#small-dialog5">Buy
+                            <div class="agileits-buy"><a packprice="2500"  packname="Facebook Email ID 2,500/- Per Lac"  data-toggle="modal" data-target="#myModal" class="modalPopup"  href="#small-dialog5">Buy
                                     Now</a><br><br>
                                 <a href="http://maqpaperltd.com/web/social/" target="_blank">DEMO</a>
                             </div>

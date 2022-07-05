@@ -22,7 +22,7 @@
                             <p>প্রতি লক্ষ ইমেল পাঠানো</p>
                             <p>মেয়াদ ২ দিন </p>
                             <p>রিপোর্ট প্রদান </p>
-                            <div class="agileits-buy"><a packprice="2500"  packname="ইমেইল মার্কেটিং ৩,৫০০/-টাকা "  data-toggle="modal" data-target="#myModal" class="modalPopup"  href="#small-dialog1">Buy
+                            <div class="agileits-buy"><a packprice="3500"  packname="ইমেইল মার্কেটিং ৩,৫০০/-টাকা "  data-toggle="modal" data-target="#myModal" class="modalPopup"  href="#small-dialog1">Buy
                                     Now</a><br><br>
                                 <a href="http://maqpaperltd.com/web/static/" target="_blank">DEMO</a>
                             </div>

@@ -23,7 +23,7 @@ Route::view('/','index')->name('index');
 Route::view('soft','soft')->name('soft');
 Route::view('apps','mobileapp')->name('apps');
 Route::view('marketing','marketing')->name('marketing');
-Route::view('database','database')->name('database');
+Route::view('databases','database')->name('database');
 
 
 

@@ -1,7 +1,14 @@
 @extends('app')
 @section('content')
     <div class="main">
+        @if (session()->has('success'))
+            <div class="container col-md-6 alert alert-primary alert-dismissible ">
+                <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                {{ session()->get('success') }}
+            </div>
+        @endif
         <h1> ওয়েবসাইট তৈরীর মূল্য তালিকা</h1>
+
         <p align="center" class="style1"> ডোমেইন, হোষ্টিং ও ডিজাইনসহ ফুল প্যাকেজ </p>
         <div align="center">
 
@@ -30,7 +37,8 @@
                             <p>2 Days Delivery </p>
                             <p>1 web module</p>
                             <p>500/- Next per page</p>
-                            <div class="agileits-buy"><a packprice="5000"  packname="স্ট্যাটিক ওয়েবসাইট ৫,০০০/-টাকা"  data-toggle="modal" data-target="#myModal" class="modalPopup"   href="#small-dialog1">Buy
+                            <div class="agileits-buy"><a packprice="5000" packname="স্ট্যাটিক ওয়েবসাইট ৫,০০০/-টাকা"
+                                    data-toggle="modal" data-target="#myModal" class="modalPopup" href="#small-dialog1">Buy
                                     Now</a><br><br>
                                 <a href="http://maqpaperltd.com/web/static/" target="_blank">DEMO</a>
                             </div>
@@ -50,7 +58,8 @@
                             <p>2 Days Delivery </p>
                             <p>Admin/Editing Panel</p>
                             <p>500/- Next per page</p>
-                            <div class="agileits-buy"><a  packprice="8000"  packname="ডায়নামিক ওয়েবসাইট ৮,০০০/-টাকা"  data-toggle="modal" data-target="#myModal" class="modalPopup" href="#small-dialog2">Buy
+                            <div class="agileits-buy"><a packprice="8000" packname="ডায়নামিক ওয়েবসাইট ৮,০০০/-টাকা"
+                                    data-toggle="modal" data-target="#myModal" class="modalPopup" href="#small-dialog2">Buy
                                     Now</a><br><br>
                                 <a href="http://maqpaperltd.com/web/dynamic/" target="_blank">DEMO</a>
                             </div>
@@ -70,7 +79,8 @@
                             <p>3 Days Delivery </p>
                             <p>3 web module</p>
                             <p>2000/- Next module</p>
-                            <div class="agileits-buy"><a packprice="15000"  packname="ইকামার্স ওয়েবসাইট ১৫,০০০/-টাকা"  data-toggle="modal" data-target="#myModal" class="modalPopup"  href="#small-dialog3">Buy
+                            <div class="agileits-buy"><a packprice="15000" packname="ইকামার্স ওয়েবসাইট ১৫,০০০/-টাকা"
+                                    data-toggle="modal" data-target="#myModal" class="modalPopup" href="#small-dialog3">Buy
                                     Now</a><br><br>
                                 <a href="http://maqpaperltd.com/web/ecom/" target="_blank">DEMO</a>
                             </div>
@@ -90,7 +100,8 @@
                             <p>7 Days Delivery </p>
                             <p>3 web module</p>
                             <p>2000/- Next module</p>
-                            <div class="agileits-buy"><a packprice="20000"  packname="রেডিও, টিভি ও পত্রিকা ২০,০০০/-টাকা "  data-toggle="modal" data-target="#myModal" class="modalPopup"  href="#small-dialog4">Buy
+                            <div class="agileits-buy"><a packprice="20000" packname="রেডিও, টিভি ও পত্রিকা ২০,০০০/-টাকা "
+                                    data-toggle="modal" data-target="#myModal" class="modalPopup" href="#small-dialog4">Buy
                                     Now</a><br><br>
                                 <a href="http://maqpaperltd.com/web/newstv/" target="_blank">DEMO</a>
                             </div>
@@ -110,7 +121,8 @@
                             <p>7 Days Delivery </p>
                             <p>3 web module</p>
                             <p>2000/- Next module</p>
-                            <div class="agileits-buy"><a packprice="25000"  packname="ক্লাসিফাইড/স্যোশাল ২৫,০০০/-টাকা "  data-toggle="modal" data-target="#myModal" class="modalPopup"  href="#small-dialog5">Buy
+                            <div class="agileits-buy"><a packprice="25000" packname="ক্লাসিফাইড/স্যোশাল ২৫,০০০/-টাকা "
+                                    data-toggle="modal" data-target="#myModal" class="modalPopup" href="#small-dialog5">Buy
                                     Now</a><br><br>
                                 <a href="http://maqpaperltd.com/web/social/" target="_blank">DEMO</a>
                             </div>
